@@ -1,0 +1,14 @@
+version: v1
+plugins:
+  - name: go
+    out: ../backend/src/adapter/grpc
+    opt: paths=source_relative
+  - name: connect-go
+    out: ../backend/src/adapter/grpc
+    opt: paths=source_relative
+  - plugin: es
+    out: ../frontend/src/repositories/grpc
+    opt: target=ts
+  - plugin: connect-web
+    out: ../frontend/src/repositories/grpc
+    opt: target=ts
